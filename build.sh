@@ -1,6 +1,7 @@
 cd libsnark
 mkdir build
 cd build
+git submodule update --init --recursive
 
 # If Windows or Linux
 cmake ..
@@ -11,7 +12,6 @@ cmake ..
 # brew install boost
 # brew install gcc
 # ln -s /usr/local/opt/openssl/include/openssl /usr/local/include
-# git submodule update --init --recursive
 # cmake -DWITH_PROCPS=OFF -DWITH_SUPERCOP=OFF ..
 
 
