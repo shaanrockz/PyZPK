@@ -47,7 +47,7 @@ jobs:
           mkdir build
           cd build
           sudo apt-get install libboost-all-dev
-          pkg-config libboost-dev --cflags
+          pkg-config libboost-all-dev --cflags
           cmake .. -DWITH_PROCPS=OFF 
           make
       - name: Scan for security issues
