@@ -47,6 +47,7 @@ jobs:
           mkdir build
           cd build
           git submodule update --init --recursive
+          sudo apt-get install libboost-dev= 1.55
           cmake .. -DWITH_PROCPS=OFF 
           make
       - name: Scan for security issues
