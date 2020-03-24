@@ -46,7 +46,6 @@ jobs:
           cd libsnark
           mkdir build
           cd build
-          git submodule update --init --recursive
           sudo apt-get install libboost-all-dev
           cmake .. -DWITH_PROCPS=OFF 
           make
