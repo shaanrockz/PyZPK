@@ -40,6 +40,7 @@ jobs:
           flake8 test
       - name: Building Library
         run: |
+          chmod u+r+x build.sh
           ./build.sh
       - name: Scan for security issues
         run: |
