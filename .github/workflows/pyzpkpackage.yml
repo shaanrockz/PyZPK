@@ -43,8 +43,12 @@ jobs:
           rm -r libsnark
           git submodule init
           git submodule foreach --recursive git reset --hard
-          chmod u+r+x build.sh
-          ./build.sh
+          cd libsnark
+          mkdir build
+          cd build
+          git submodule update --init --recursive
+          cmake ..
+          make
       - name: Scan for security issues
         run: |
           bandit -r syft -ll
