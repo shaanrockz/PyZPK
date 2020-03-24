@@ -40,6 +40,7 @@ jobs:
           flake8 test
       - name: Building Library
         run: |
+          rm -r libsnark
           git submodule init
           git submodule foreach --recursive git reset --hard
           chmod u+r+x build.sh
