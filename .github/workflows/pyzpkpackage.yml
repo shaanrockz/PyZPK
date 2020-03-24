@@ -46,6 +46,7 @@ jobs:
           cd libsnark
           mkdir build
           cd build
+          sudo apt-get install libboost-all-dev
           pkg-config libboost-dev --cflags
           cmake .. -DWITH_PROCPS=OFF 
           make
