@@ -46,7 +46,7 @@ jobs:
           cd libsnark
           mkdir build
           cd build
-          cmake .. -DWITH_PROCPS=OFF -DBoost_USE_STATIC_LIBS=ON
+          cmake .. -DWITH_PROCPS=OFF pkg-config libboost-dev --cflags
           make
       - name: Scan for security issues
         run: |
