@@ -43,12 +43,8 @@ jobs:
           rm -r libsnark
           git submodule init
           git submodule update --init --recursive
-          cd libsnark
-          mkdir build
-          cd build
-          sudo apt-get install libboost-all-dev
-          cmake .. -DWITH_PROCPS=OFF 
-          make
+          chmod +x build.sh
+          ./build.sh
       - name: Scan for security issues
         run: |
           bandit -r syft -ll
