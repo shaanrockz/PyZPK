@@ -40,10 +40,6 @@ jobs:
           flake8 test
       - name: Building Library
         run: |
-          rm -r libsnark
-          git submodule init
-          git submodule update --init --recursive
-          sudo apt-get install libboost-all-dev
           chmod 557 build.sh
           ./build.sh
       - name: Scan for security issues
